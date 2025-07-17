@@ -9,7 +9,9 @@
       padding: 0;
       height: 100%;
       font-family: sans-serif;
-      overflow: hidden;
+      background: black;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
     .video-bg {
@@ -19,29 +21,34 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
-      pointer-events: none;
+      overflow: hidden;
     }
 
     .video-bg iframe {
-      width: 100vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 177.78vh; /* 100 * (16/9) */
       height: 100vh;
-      object-fit: cover;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
     }
 
     .content {
       position: relative;
       z-index: 1;
       color: white;
-      padding: 4vw;
-      max-width: 800px;
-      line-height: 1.5;
+      padding: 5vw;
+      max-width: 900px;
+      line-height: 1.6;
       font-size: 1.1rem;
     }
 
     .highlight {
       background: rgba(47, 127, 85, 0.78);
-      padding: 0.2em 0.4em;
+      padding: 0.3em 0.5em;
       display: inline-block;
+      margin-bottom: 1em;
     }
 
     a {
@@ -75,9 +82,11 @@
     <h1 style="--font-scale: 0.72;">
       <span class="highlight">OPEN-CALL<br>Memory Pavilion @ </span>
       <a class="highlight" href="https://thewrong.org/" rel="quick-view"><b>The Wrong Biennale</b></a><br>
-      <b><span class="highlight">Deadline: <span style="color: rgb(232, 52, 239);">29 July 2025</span></span></b>
+      <b><span class="highlight">Deadline: <span style="color: rgb(232, 52, 239);">29 July 2025</span></span></b><br>
+      <br>
+      <span class="highlight">Email: <a href="mailto:memorypavilion@gmail.com">memorypavilion@gmail.com</a></span>
     </h1>
-    
+
     <p class="highlight"><b>Who We Are Looking For</b><br>
     We are looking for 8 visual artists whose work explores memory, grief, and loss – whether deeply personal or culturally collective.<br>
     We welcome submissions that reflect on:<br>
